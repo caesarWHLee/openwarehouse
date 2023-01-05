@@ -69,11 +69,11 @@ const keystone = new Keystone({
     },
     cookieSecret: session.cookieSecret,
     onConnect: createDefaultAdmin(app.project),
-    sessionStore: new RedisStore({
-        client: newRedisClient(redisConf),
-        ttl: session.ttl,
-        prefix: `${app.uuid}-ss:`,
-    }),
+    // sessionStore: new RedisStore({
+    //     client: newRedisClient(redisConf),
+    //     ttl: session.ttl,
+    //     prefix: `${app.uuid}-ss:`,
+    // }),
 })
 
 for (var name in lists) {
